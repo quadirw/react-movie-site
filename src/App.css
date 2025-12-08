@@ -1,12 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,700;1,700&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Bebas Neue', cursive;
+}
+
 body {
   background: #141414;
   color: #ffffff;
 }
 
-.App {
+main {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  background: #141414;
+}
+
+.movieList__app {
   text-align: center;
   min-height: 100vh;
   padding: 20px;
+  background: #141414;
 }
 
 input {
@@ -18,11 +35,65 @@ input {
 
 button {
   padding: 10px 20px;
-  border-radius: 5px;
-  border: none;
-  background-color: #ff3c00;
+  border-radius: 4px;
+  background-color: #BBBB;
   color: white;
   cursor: pointer;
+}
+
+/* MOVIE HOME PAGE  */
+
+h1, h2 {
+  text-align: left;
+  font-size: 28px;
+  padding: 16px;
+}
+
+p {
+  padding: 20px;
+  font-size: 18px;
+}
+
+p:hover {
+  color: #fefefe;
+  font-size: 52px;
+  cursor: pointer;
+  transition: all ease 200ms;
+}
+
+/* MOVIE LIST PAGE */
+
+.movieFilterBar {
+  padding: 8px;
+}
+
+#movieSort {
+  color: #ffffff;
+  background-color: #222;
+  border-radius: 6px;
+  padding: 4px;
+}
+
+.movieList__btn {
+  border-radius: 12px;
+  padding: 6px 12px;
+  margin: 8px;
+  background-color: whitesmoke;
+  color: #141414;
+}
+
+.movieList__btn:hover {
+  background-color: #ab0000;
+  color: black;
+  cursor: pointer;
+  transition: all ease 600ms;
+}
+
+.movielist__title {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: whitesmoke;
 }
 
 .movie-container {
@@ -32,15 +103,108 @@ button {
   gap: 20px;
 }
 
+
 .movie-card {
   background: #222;
   margin: 10px;
   padding: 10px;
   width: 200px;
   border-radius: 10px;
+  color: #b6b3b3e1;
+}
+
+.movie-card:hover {
+  box-shadow: #ffffff 0px 4px 8px;
+  font-size: 32px;
+  font-weight: 600;
+  margin-top: 20px;
+  transform: scale(1.05);
+  transition: all ease 200ms;
+  cursor: pointer;
+}
+
+.movie-card img:hover {
+  transform: scale(1.18);
+  transition: all ease 300ms;
 }
 
 .movie-card img {
   width: 100%;
   border-radius: 10px;
 }
+
+.movie-card__title {
+  margin-top: 2rem;
+}
+
+/* MOVIE SWIPER */
+
+.swiper__container {
+  padding: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 2rem;
+  max-width: 100%;
+}
+
+.movieSwiper__img {
+ max-width: 100%;
+ height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: #222 0px 4px 8px;
+}
+
+.movieSwiper__title {
+  font-size: 56px;
+  font-weight: 600;
+  margin-top: 8px;
+  background-color: #222;
+  color: #ffffff;
+}
+
+.movieSwiper__para {
+  font-size: 20px;
+  margin-top: 8px;
+  background-color: #222;
+  color: #b6b3b3e1;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #141414;
+}
+
+.label {
+  padding: 6px 12px;
+}
+
+.label:hover {
+  background-color: #ab0000;
+  color: black;
+  cursor: pointer;
+  transition: all ease 600ms;
+}
+
+/* PHONES - TABLETS */
+
+@media (max-width: 768px) {
+  .swiper__container {
+    padding: 78px;
+  }
+
+  .movieSwiper__title {
+    font-size: 32px;
+  }
+
+  .movieSwiper__para:hover {
+    transition: all ease 200ms;
+    font-size: 26px;
+  }
+}
+
