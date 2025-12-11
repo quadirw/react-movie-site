@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import noImage from '../assets/Movie_Error_Loading.png'
 import '../App.css';
 
 
@@ -59,7 +60,8 @@ const MovieList = () => {
      <div className="movie-container">
         {movies.map(movie => (
           <div key={movie.imdbID} className='movie-card'>
-            <img src={movie.Poster} alt={movie.Title} />
+            <img src={movie.Poster} 
+            onError={(e) => (e.target.src = noImage)}/>
             <h3 className='movie-card__title'>{movie.Title}</h3>
             <h3 className='movie-card__date'>{movie.Year}</h3>
           </div>

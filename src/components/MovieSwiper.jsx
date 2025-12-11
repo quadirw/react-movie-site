@@ -43,7 +43,7 @@ function MovieSwiper({ slides }) {
         {slides?.map ((slide, index) => (
       <SwiperSlide key={index}>
 
-        <div className="header">
+        <div className="swiperHeader">
             <h2 className='movieSwiper__title'>Best Movie website on the East Coast!</h2>
             <p className='movieSwiper__para'>Watch all your favorite movies and tv shows here!</p>
         </div>
@@ -54,9 +54,6 @@ function MovieSwiper({ slides }) {
             <h1>{slide.Title}</h1>
         </div>
         <div className="content">
-            <div className="text-box">
-                <p>{slide.Plot}</p>
-            </div>
             <button className='label' onClick={goToMovieList}>
                 <span> More Movies?</span>
             </button>
