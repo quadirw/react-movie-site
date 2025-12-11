@@ -47,7 +47,7 @@ const MovieList = () => {
         <button type="submit" className='movieList__btn'>Search</button>
 
         <div className='movieFilterBar'>
-        <select name="movieSort" defaultValue="DEFAULT" id="movieSort" onChange={(event) => filterMovies(event.target.value)}>
+        <select name="movieSort" defaultValue="DEFAULT" onChange={(event) => filterMovies(event.target.value)}>
           <option value="default" disabled>Sort by:</option>
           <option value="RATING">Rating</option>
           <option value="NEWEST_TO_OLDEST">Newest to Oldest</option>

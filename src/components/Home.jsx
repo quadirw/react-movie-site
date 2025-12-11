@@ -9,7 +9,7 @@ function Home () {
         const [movies, setMovies] = useState([]);
 
         const fetchData = () => {
-            fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=8ecfc63b&s=avengers`)
+            fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=8ecfc63b&s=man`)
             .then(res => res.json())
             .then(data => setMovies(data.Search || []))
             .catch(e => console.log(e.message));
